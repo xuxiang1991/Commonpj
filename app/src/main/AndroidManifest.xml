@@ -40,6 +40,11 @@
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppToolbarTheme">
         </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppToolbarTheme">
+        </activity>
     </application>
 
 </manifest>

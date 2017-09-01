@@ -1,20 +1,20 @@
 package com.xuxiang.pj.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.xuxiang.pj.R;
 import com.xuxiang.pj.activity.base.BaseActivity;
-import com.xuxiang.pj.activity.base.BaseToolbarActivity;
 import com.xuxiang.pj.utils.Config;
 import com.xuxiang.pj.utils.Constant;
 
 import java.io.File;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * 类名称：广告页
@@ -24,7 +24,8 @@ import java.io.File;
  */
 public class SplashActivity extends BaseActivity {
 
-    private ImageView iv_logo;
+    @BindView(R.id.iv_logo)
+    ImageView ivLogo;
 
     @Override
     protected int getLayoutId() {
@@ -33,7 +34,6 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void setupViews() {
-        iv_logo = (ImageView) findViewById(R.id.iv_logo);
     }
 
     @Override
@@ -41,10 +41,10 @@ public class SplashActivity extends BaseActivity {
 
         final File file = new File(Constant.mSplash_img_patch);
         if (file.exists()) {
-            iv_logo.setImageURI(Uri.fromFile(file));
+            ivLogo.setImageURI(Uri.fromFile(file));
         } else {
             Config.setCurrentLOGO("");
-            iv_logo.setImageResource(R.drawable.startup);
+            ivLogo.setImageResource(R.drawable.startup);
         }
 
         new Handler().postDelayed(new Runnable() {
