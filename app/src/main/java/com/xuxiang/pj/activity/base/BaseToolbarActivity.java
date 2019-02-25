@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Window;
 
 import com.umeng.analytics.MobclickAgent;
 import com.xuxiang.pj.R;
@@ -14,7 +15,6 @@ import com.xuxiang.pj.utils.ActivityManager;
 import com.xuxiang.pj.utils.Config;
 import com.xuxiang.pj.utils.toast.ToastManager;
 
-import butterknife.ButterKnife;
 
 
 /**
@@ -33,19 +33,21 @@ public abstract class BaseToolbarActivity extends AppCompatActivity {
         activityManager = ActivityManager.getScreenManager();
         activityManager.pushActivity(this);
         int layoutId = getLayoutId();
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         if (layoutId != 0) {
             setContentView(layoutId);
             // 删除窗口背景
             getWindow().setBackgroundDrawable(null);
         }
-        ButterKnife.bind(self);
         preliminary();
 
         // 设置分享的内容
 
 
         if (Config.width * Config.height == 0)
+        {
             Config.setScreenSize(this);//获取屏幕宽高
+        }
 
     }
 

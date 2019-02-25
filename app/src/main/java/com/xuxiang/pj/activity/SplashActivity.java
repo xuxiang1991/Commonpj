@@ -13,8 +13,6 @@ import com.xuxiang.pj.utils.Constant;
 
 import java.io.File;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * 类名称：广告页
@@ -24,7 +22,6 @@ import butterknife.ButterKnife;
  */
 public class SplashActivity extends BaseActivity {
 
-    @BindView(R.id.iv_logo)
     ImageView ivLogo;
 
     @Override
@@ -34,10 +31,12 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void setupViews() {
+        ivLogo = findViewById(R.id.iv_logo);
     }
 
     @Override
     protected void initialized() {
+
 
         final File file = new File(Constant.mSplash_img_patch);
         if (file.exists()) {
@@ -65,7 +64,7 @@ public class SplashActivity extends BaseActivity {
 //            createShortcut();
 //        }
 //        if (Config.getUserInfo() != null) {
-        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        startActivity(new Intent(SplashActivity.this, RoleSelectActivity.class));
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 //        } else {
 //            startActivity(new Intent(SplashActivity.this, LoginActivity.class));

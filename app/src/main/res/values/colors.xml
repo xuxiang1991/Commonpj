@@ -326,4 +326,12 @@
     <color name="buy_bg_color">#f6f6f6</color>
     <color name="unity_line_content">#d5d5d5</color>
 
+
+    <color name="unity_bg">#0A3C9B</color>
+    <color name="half_transwhite">#80ffffff</color>
+    <color name="color_d9d9d9">#d9d9d9</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_333333">#333333</color>
+    <color name="spray">#7DC2E2</color>
+    <color name="color_eeeeee">#EEEEEE</color>
 </resources>

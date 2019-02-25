@@ -41,6 +41,16 @@
             android:theme="@style/AppToolbarTheme">
         </activity>
         <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppToolbarTheme">
+        </activity>
+        <activity
+            android:name=".activity.RoleSelectActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppToolbarTheme">
+        </activity>
+        <activity
             android:name=".activity.LoginActivity"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/AppToolbarTheme">

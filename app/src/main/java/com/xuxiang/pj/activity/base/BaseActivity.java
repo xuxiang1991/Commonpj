@@ -12,7 +12,6 @@ import com.xuxiang.pj.utils.ActivityManager;
 import com.xuxiang.pj.utils.Config;
 import com.xuxiang.pj.utils.toast.ToastManager;
 
-import butterknife.ButterKnife;
 
 /**
  * @author GivenTang
@@ -38,7 +37,6 @@ public abstract class BaseActivity extends FragmentActivity {
             // 删除窗口背景
             getWindow().setBackgroundDrawable(null);
         }
-        ButterKnife.bind(self);
         preliminary();
 
         // 设置分享的内容

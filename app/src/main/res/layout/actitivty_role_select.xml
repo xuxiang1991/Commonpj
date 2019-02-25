@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/unity_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        style="@style/white_text_22"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true"
+        android:text="账户选择" />
+
+    <LinearLayout
+        style="@style/layout_horizontal"
+        android:layout_centerInParent="true"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/white_text_16"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_white_bg"
+            android:text="用户"
+            android:textColor="@color/unity_black_text" />
+
+        <TextView
+            style="@style/white_text_16"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_halfwhite_nostrake"
+            android:text="医生" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_round_white_strake"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始使用"
+            android:textColor="@color/white"
+            android:drawableRight="@mipmap/ic_pay_back"
+            android:drawablePadding="8dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

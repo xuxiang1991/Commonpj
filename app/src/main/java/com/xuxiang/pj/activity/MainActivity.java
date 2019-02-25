@@ -21,9 +21,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * 类名称：
@@ -31,11 +28,9 @@ import butterknife.OnClick;
  * 创建人：
  * 修改人：
  */
-public class MainActivity extends BaseToolbarActivity  {
+public class MainActivity extends BaseToolbarActivity implements View.OnClickListener {
 
-    @BindView(R.id.bt_go)
     Button btGo;
-    @BindView(R.id.tv_message)
     TextView tvMessage;
 
     int i = 0;
@@ -50,41 +45,9 @@ public class MainActivity extends BaseToolbarActivity  {
     @Override
     protected void setupViews() {
 
+        btGo = findViewById(R.id.bt_go);
+        tvMessage = findViewById(R.id.tv_message);
 
-        person = new MyPerson();
-
-//        btGo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                i++;
-//                MyObserver observer = new MyObserver(i);
-//                person.addObserver(observer);
-//
-//
-////                DevTechFrontier devTechFrontier=new DevTechFrontier();
-////                Coder mrsimple=new Coder("mr.simple");
-////                Coder coder1=new Coder("code-1");
-////                Coder coder2=new Coder("code-2");
-////                Coder coder3=new Coder("code-3");
-////
-////                devTechFrontier.addObserver(mrsimple);
-////                devTechFrontier.addObserver(coder1);
-////                devTechFrontier.addObserver(coder2);
-////                devTechFrontier.addObserver(coder3);
-////
-////                devTechFrontier.postNewPublication("新学期开始了");
-//
-////                startActivity(new Intent(self, LoginActivity.class));
-//            }
-//        });
-        btGo.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-
-                person.setName(names[i % 3]);
-                return true;
-            }
-        });
         EventBus.getDefault().register(self);
     }
 
@@ -115,7 +78,7 @@ public class MainActivity extends BaseToolbarActivity  {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(MessageEvent event) {
         tvMessage.setText(event.getMessage());
-
+// EventBus.getDefault().post(new MessageEvent("你真好"));
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -125,13 +88,10 @@ public class MainActivity extends BaseToolbarActivity  {
     }
 
 
-    @OnClick(R.id.bt_go)
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_go:
-                i++;
-                MyObserver observer = new MyObserver(i);
-                person.addObserver(observer);
                 break;
         }
 

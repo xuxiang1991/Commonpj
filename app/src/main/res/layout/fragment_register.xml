@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_eeeeee"
+        android:gravity="center_vertical|start"
+        android:hint="姓名"
+        android:padding="8dp"
+        android:textColor="@color/color_666666"
+        android:textColorHint="@color/color_666666"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/color_eeeeee"
+        android:gravity="center_vertical|start"
+        android:hint="手机"
+        android:padding="8dp"
+        android:textColor="@color/color_666666"
+        android:textColorHint="@color/color_666666"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/color_eeeeee"
+        android:gravity="center_vertical|start"
+        android:hint="密码"
+        android:padding="8dp"
+        android:textColor="@color/color_666666"
+        android:textColorHint="@color/color_666666"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/color_eeeeee"
+        android:gravity="center_vertical|start"
+        android:hint="重复密码"
+        android:padding="8dp"
+        android:textColor="@color/color_666666"
+        android:textColorHint="@color/color_666666"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="同意我们的《服务条款》"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp" />
+
+    <Button
+        style="@style/white_text_16"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_round_blue_bg"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:text="注  册" />
+
+</LinearLayout>
